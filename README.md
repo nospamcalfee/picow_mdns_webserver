@@ -40,7 +40,7 @@ There is no requirement for any pico-examples source code (I hope)
 ```bash
 cd yourprojectdirectory
 mkdir build; cd build
-cmake ..  -DWIFI_SSID="Your Network" -DWIFI_PASSWORD="Your Password"
+cmake ..  -DWIFI_SSID="Your Network" -DWIFI_PASSWORD="Your Password" -DHOSTNAME="fred"
 make
 ```
 
