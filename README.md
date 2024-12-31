@@ -44,9 +44,10 @@ cmake ..  -DWIFI_SSID="Your Network" -DWIFI_PASSWORD="Your Password" -DHOSTNAME=
 make
 ```
 
-This example assumes you are sitting in the build subdirectory. Note that the
-website files are built at cmake time, so I generally use the following
-incantation to rebuild my app:
+This example assumes you are sitting in the build subdirectory. The definition
+of HOSTNAME becomes the name of the server, used like "fred.local" as a URL
+in your favorite browser. This assumes your host OS such as linux, Mac, or
+Windows (if mdns is installed) supports the .local dynamic dns name.
 
 ```bash
 rm CMakeCache.txt ; cmake ..  -DWIFI_SSID="Your Network" -DWIFI_PASSWORD="Your Password" -DHOSTNAME="fred"; make clean; make -j 8
@@ -55,5 +56,5 @@ rm CMakeCache.txt ; cmake ..  -DWIFI_SSID="Your Network" -DWIFI_PASSWORD="Your P
 If you want to see the very verbose build command lines add "make VERBOSE"
 instead of "make" above.
 
-Once built, the `spp_w_webserver.uf2` file can be dragged and dropped onto your
+Once built, the `picow_mdns_webserver.uf2` file can be dragged and dropped onto your
 Raspberry Pi Pico to install and run the example.
